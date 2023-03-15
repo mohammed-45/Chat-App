@@ -1,0 +1,279 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.app {
+    background-color: hsl(0, 0%, 100%);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.app .left {
+    width: 400px;
+    height: 80vh;
+    background-image: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    border-bottom-left-radius: 400px;
+    border-bottom-right-radius: 550px;
+    position: absolute;
+    top: -40px;
+    left: -50px;
+}
+.app .right {
+    width: 400px;
+    height: 80vh;
+    background-color: hwb(290deg 96% 2%);
+    border-top-left-radius: 550px;
+    border-top-right-radius: 400px;
+    position: absolute;
+    bottom: -40px;
+    right: -130px;
+}
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.app .container .phone {
+    width: 320px;
+    height: 625px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 10px;
+    position: relative;
+    box-shadow: 20px 20px 35px #eee;
+    border: 0.5px solid #eeeeee9e;
+    margin: auto;
+}
+.app .container .phone::after {
+    content: "";
+    position: absolute;
+    width: 52%;
+    height: 30px;
+    top: 0;
+    border-bottom-left-radius: 17px;
+    border-bottom-right-radius: 17px;
+    left: 24%;
+    background-color: white;
+    z-index: 1;
+}
+.app .container .phone .content {
+    background-color: hsl(270, 20%, 96%);
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    /* padding: 10px; */
+}
+.app .container .phone .content .high-box {
+    background-image: linear-gradient(to left,hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 20px 15px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 6px #ccc;
+}
+.app .container .phone .content .high-box .shape {
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+}
+.app .container .phone .content .high-box .shape::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f104";
+    font-weight: 900;
+    color: white;
+}
+.app .container .phone .content .high-box .shape .image {
+    border: 2px solid hsl(276, 55%, 52%);
+    padding: 1px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 7px;
+}
+.app .container .phone .content .high-box .shape .image img {
+    border-radius: 50%;
+    width: 34px;
+    border: 1.8px solid white;
+}
+.app .container .phone .content .high-box .shape .info {
+    margin-left: 6px;
+}
+.app .container .phone .content .high-box .shape .info h3 {
+    color: white;
+    font-size: 1em;
+    margin-top: 5px;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+.app .container .phone .content .high-box .shape .info p {
+    color: hsl(270deg 12% 78%);
+    font-size: 12px;
+    margin-top: 5px;
+}
+.app .container .phone .content .high-box .dots{
+    color: white;
+}
+.app .container .phone .content .body {
+    padding: 10px;
+}
+.app .container .phone .content .body .left-messages {
+    max-width: 187px;
+}
+.app .container .phone .content .body .left-messages p {
+    background-color: hsl(206deg 6% 79% / 50%);
+    padding: 10px;
+    font-size: 12px;
+    margin: 3px 0 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: fit-content;
+
+}
+.app .container .phone .content .body .photos {
+    text-align: end;
+    margin: 15px 0 5px;
+}
+.app .container .phone .content .body .photos img {
+    border-radius: 10px;
+    width: 45px;
+    margin-left: 5px;
+}
+.app .container .phone .content .body .right-messages {
+    max-width: 187px;
+    margin-left: auto;
+}
+.app .container .phone .content .body .right-messages p {
+    background-color: white;
+    padding: 10px;
+    font-size: 11.7px;
+    margin: 0 0 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: 0 3px 6px #ccc;
+    width: fit-content;
+    margin: 0 0px 10px auto;
+}
+.app .container .phone .content .body .choose .first-choice {
+    background-image: linear-gradient(to right,hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    padding: 10px 20px 10px 10px;
+    margin: 0 0 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 200px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 6px #ccc;
+}
+.app .container .phone .content .body .choose form {
+    font-weight: 400;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.app .container .phone .content .body .choose form::before {
+    content: "";
+    position: absolute;
+    border: 1px solid hsl(289, 100%, 72%);
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+}
+.app .container .phone .content .body .choose form input[type="radio"]  {
+    position: absolute;
+    visibility: hidden;
+}
+.app .container .phone .content .body .choose form label {
+    margin-left: 22px;
+}
+.app .container .phone .content .body .choose span {
+    font-weight: bold;
+}
+.app .container .phone .content .body .footer {
+    position: relative;
+}
+.app .container .phone .content .body textarea {
+    overflow: auto;
+    border: none;
+    font-size: 13px;
+    padding: 20px 30px 5px;
+    width: 100%;
+    border-radius: 50px;
+    resize: none;
+    margin-top: 5px;
+}
+.app .container .phone .content .body textarea:focus {
+    outline: none;
+}
+.app .container .phone .content .body .footer {
+    position: relative;
+}
+.app .container .phone .content .body .footer::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f105";
+    position: absolute;
+    font-weight: 900;
+    right: 10px;
+    top: 13px;
+    color: white;
+    background-color: hsl(271, 36%, 24%);
+    padding: 10px;
+    border-radius: 50%;
+    width: 20px;
+    text-align: center;
+}
+.app .container .text {
+    max-width: 500px;
+    padding: 20px 0 20px 50px;
+    margin-left: 100px;
+} 
+.app .container .text h2 {
+    font-size: 2em;
+    font-weight: 500;
+}
+.app .container .text p {
+    color:  hsl(270, 7%, 64%);
+    line-height: 1.7;
+    margin-top: 20px;
+}
+
+@media (max-width: 991px) {
+    .app {
+        flex-direction: column;
+        padding: 18px;
+    }
+    .app .right {
+        right: -190px;
+        top: 50%;
+    }
+    .app .left {
+        left: -190px;
+    }
+    .app .container .text {
+        width: 100%;
+        padding: 0 30px;
+        margin: 65px auto;
+        text-align: center;
+    }
+
+}
